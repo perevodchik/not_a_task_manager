@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Not a Task Manager</string>
+    <string name="not_a_title_preview_text">Not a Title</string>
+    <string name="not_a_text_preview_text">Not a Text</string>
+    <string name="input_here">Input your text</string>
+    <string name="tags_text">Tags</string>
+    <string name="delete_task">Delete task?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>

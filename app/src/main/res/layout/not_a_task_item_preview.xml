@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/not_a_task_pane_preview"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/background_not_a_task_preview">
+
+    <TextView
+        android:id="@+id/not_a_title_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/not_a_title_preview_text"
+        android:textColor="@color/blackOlive"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/not_a_text_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/not_a_text_preview_text"
+        android:textSize="14sp"
+        android:maxLength="50"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/not_a_tags_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="20dp"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:showDivider="beginning|middle"/>
+
+    <LinearLayout
+        android:id="@+id/buttons_pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:gravity="end"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:id="@+id/favorite_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_favorite_0"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/delete_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_delete"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/not_a_task_pane"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_not_a_task"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/not_a_task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_here"
+        android:backgroundTint="@color/white"
+        android:inputType="textNoSuggestions"
+        android:textColor="@color/blackOlive"
+        tools:ignore="Autofill,LabelFor"
+        tools:targetApi="o" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/background_edit_text"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/not_a_task_tag_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:autofillHints="@string/input_here"
+        android:background="@null"
+        android:hint="@string/tags_text"
+        android:inputType="textNoSuggestions"
+        android:textColor="@color/blackOlive"
+        tools:ignore="LabelFor"
+        tools:targetApi="o" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/not_a_task_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="20dp"
+        android:background="@color/brightYellow"
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:showDivider="beginning|middle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="10dp"
+            tools:ignore="RtlSymmetry">
+            <EditText
+                android:id="@+id/not_a_task_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_here"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@color/blackOlive"
+                tools:ignore="Autofill,LabelFor"
+                tools:targetApi="o" />
+
+            <TextView
+                android:id="@+id/not_a_task_date_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="end"
+                android:textColor="@color/blackOlive"
+                android:textSize="12sp"/>
+            <TextView
+                android:id="@+id/not_a_task_date_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="@color/blackOlive"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons_pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:gravity="end"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:id="@+id/favorite_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_favorite_not"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/delete_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_delete"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+</LinearLayout>
